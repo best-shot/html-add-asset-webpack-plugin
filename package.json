@@ -1,0 +1,61 @@
+{
+  "name": "html-add-asset-webpack-plugin",
+  "version": "0.0.0",
+  "description": "Webpack plugin to inject tags to html",
+  "license": "MIT",
+  "author": {
+    "name": "Eric Chen",
+    "email": "arikro@qq.com"
+  },
+  "keywords": [
+    "cdn",
+    "html",
+    "html-webpack-plugin",
+    "plugin",
+    "script",
+    "style",
+    "webpack",
+    "webpack-plugin"
+  ],
+  "homepage": "https://github.com/best-shot/html-add-asset-webpack-plugin",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/best-shot/html-add-asset-webpack-plugin.git"
+  },
+  "bugs": {
+    "url": "https://github.com/best-shot/html-add-asset-webpack-plugin/issues"
+  },
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "lint:staged": "nice-move lint staged",
+    "lint:type": "tsc --noEmit",
+    "prepare": "git config core.hooksPath .githooks",
+    "prepublishOnly": "npm run lint:staged && npm run build"
+  },
+  "devDependencies": {
+    "@nice-move/cli": "^0.7.1",
+    "@nice-move/eslint-config-base": "^0.6.5",
+    "@nice-move/prettier-config": "^0.5.4",
+    "eslint": "^8.12.0",
+    "garou": "^0.4.4",
+    "prettier": "^2.6.1",
+    "typescript": "^4.6.3",
+    "webpack": "^5.70.0"
+  },
+  "peerDependencies": {
+    "html-webpack-plugin": "^5.5.0",
+    "webpack": "^5.70.0"
+  },
+  "engines": {
+    "node": "^12.22.0 || ^14.17.0 || >=16.13.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "eslintConfig": {
+    "extends": "@nice-move/eslint-config-base"
+  },
+  "prettier": "@nice-move/prettier-config"
+}
