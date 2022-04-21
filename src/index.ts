@@ -25,7 +25,10 @@ function mapping(externals: Tag[] = []): MergeTag[] {
     }) => {
       return {
         tagName,
-        attributes,
+        attributes: {
+          integrity: null,
+          ...attributes,
+        },
         innerHTML,
         voidTag,
         prepend,
