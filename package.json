@@ -1,6 +1,6 @@
 {
   "name": "html-add-asset-webpack-plugin",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Webpack plugin to inject tags to html",
   "license": "MIT",
   "author": {
@@ -36,9 +36,12 @@
     "prepare": "git config core.hooksPath .githooks",
     "prepublishOnly": "npm run lint:staged && npm run build"
   },
+  "dependencies": {
+    "schema-utils": "^4.0.0"
+  },
   "devDependencies": {
     "@nice-move/cli": "^0.7.2",
-    "@nice-move/eslint-config-base": "^0.6.7",
+    "@nice-move/eslint-config-base": "^0.6.8",
     "@nice-move/prettier-config": "^0.5.4",
     "eslint": "^8.13.0",
     "garou": "^0.4.6",

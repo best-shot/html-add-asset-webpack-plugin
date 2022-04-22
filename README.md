@@ -36,6 +36,7 @@ plugins: [
   new HtmlWebpackPlugin({
     filename: 'other.html',
     tags: [
+      'simple.js',
       {
         tagName: 'script',
         prepend: true,
@@ -56,6 +57,7 @@ To:
 <script src="common-script.js"></script>
 
 <!-- other.html -->
+<script src="simple.js"></script>
 <script src="special-script.js"></script>
 <script src="common-script.js"></script>
 ```
@@ -70,6 +72,8 @@ interface Tag extends Omit<HtmlTagObject, 'voidTag'> {
   prepend?: boolean;
   tagName: 'meta' | 'script' | 'style';
 }
+
+type tags = (string | Tag)[];
 ```
 
 ## Inspiration
