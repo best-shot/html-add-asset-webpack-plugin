@@ -63,7 +63,6 @@ function mapping(externals: Item[] = []): MergeTag[] {
       };
     }
 
-    // @ts-ignore
     const {
       tagName,
       attributes = {},
@@ -138,7 +137,7 @@ export class HtmlAddAssetWebpackPlugin {
       const hooks = HtmlWebpackPlugin.getHooks(compilation).alterAssetTags;
 
       hooks.tapAsync(name, (htmlPluginData, callback) => {
-        // @ts-ignore
+        // @ts-expect-error
         const { tags = [] }: { tags: Tag[] } =
           htmlPluginData.plugin.userOptions;
 

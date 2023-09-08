@@ -1,11 +1,11 @@
 {
+  "extends": "@nice-move/tsconfig/base.json",
   "compilerOptions": {
     "declaration": true,
     "esModuleInterop": true,
     "module": "commonjs",
-    "outDir": "./dist",
-    "strict": true,
-    "target": "es2022"
+    "moduleResolution": "node",
+    "outDir": "./dist"
   },
-  "include": ["./src"]
+  "include": ["./src/"]
 }

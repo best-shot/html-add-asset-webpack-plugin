@@ -70,7 +70,7 @@ To:
 interface Tag extends Omit<HtmlTagObject, 'voidTag'> {
   voidTag?: boolean;
   prepend?: boolean;
-  tagName: 'meta' | 'script' | 'style';
+  tagName: 'meta' | 'script' | 'style' | 'link';
 }
 
 type tags = (string | Tag)[];
