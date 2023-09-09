@@ -1,7 +1,8 @@
-import HtmlWebpackPlugin, { HtmlTagObject } from 'html-webpack-plugin';
+import type { HtmlTagObject } from 'html-webpack-plugin';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
 import type { JSONSchema7 } from 'json-schema';
 import { validate } from 'schema-utils';
-import { Compilation, Compiler } from 'webpack';
+import type { Compilation, Compiler } from 'webpack';
 
 interface Tag extends Omit<HtmlTagObject, 'voidTag'> {
   voidTag?: boolean;
